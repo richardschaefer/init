@@ -1,0 +1,313 @@
+.button{
+  background: none;
+  border: none;
+  padding: 1em .2em;
+  text-align: center;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  min-width: 225px;
+  cursor: pointer;
+}
+.button__responsive{
+  min-width: inherit;
+  width: 100%;
+}
+.button__brand{
+  background: $brand;
+  color: #fff;
+  font-size: 15.56px;
+  letter-spacing: 2.2px;
+  padding: 20px 0;
+  @include transition-all($hover);
+  &:hover{
+    background-color: #000;
+  }
+}
+.button__padding{
+  padding: 1em 2em;
+  min-width: inherit;
+}
+.button__submit{
+  @extend %col-sm-6;
+  @extend %col-sm-offset-3;
+}
+.button__primary{
+  font-size: 14px;
+  background: #5AD796;
+  border-radius: $radius;
+  color: #FFFFFF;
+  letter-spacing: 2.2px;
+  &:hover{
+    background-color: #5AD796 * 1.1;
+    color: $sub;
+  }
+}
+.button__secondary{
+  font-size: 14px;
+  background: $mercury;
+  border-radius: $radius;
+  color: #403F3E;
+  letter-spacing: 2.2px;
+  &:hover{
+    background-color: $off-white * 1.04;
+    color: $sub;
+  }
+}
+.button__tertiary{
+  border: 1px solid #5AD796;
+  font-size: 14px;
+  font-weight: 600;
+  color: #FFFFFF;
+  letter-spacing: 2.2px;
+  @include transition-all($hover);
+  &:hover{
+    background-color: #fff;
+    color: $sub;
+    border-color: #fff;
+  }
+}
+.button__back{
+  @extend .rounded;
+  color: $sub;
+  font-weight: 700;
+  // width: 65px;
+  border: none;
+  padding: .3em 1em .2em 1em;
+  margin-top: -47px;
+  &:hover{
+    color: $sub;
+    background-color: #fff;
+  }
+}
+.button__shortlist{
+  position: absolute;
+  right: 0;
+  bottom: 0px;
+  margin-bottom: -4px;
+  opacity: .2;
+  filter: grayscale(80%);
+  transition: all .4s ease;
+  &:hover{
+    filter: grayscale(0);
+    opacity: 1;
+  }
+}
+.shortlisted{
+  filter: grayscale(0);
+  opacity: 1;
+}
+.button__contact{
+  display: block;
+  width: 54px;
+  height: 54px;
+  text-align: center;
+  background-color: rgba(81 ,84 ,80 ,.875);
+  color: #CECECE;
+  font-size: .5em;
+  padding-top: 10px;
+  letter-spacing: .4px;
+  line-height: 2em;
+  text-transform: uppercase;
+  margin-top: 1px;
+  backdrop-filter: blur(15px);
+  cursor: pointer;
+  @include transition-all($hover);
+  &:hover{
+    background-color: #333;
+    color: #fff;
+  }
+}
+.button__contact__enquiry{
+  background-color: $highlight;
+  color: #000;
+  // margin: 7vh 0 17vh 0;
+  &:hover{
+    background-color: #fff;
+    color: #000;
+  }
+}
+.button__facebook{
+  background-color: $facebook;
+}
+.button__twitter{
+  background-color: $twitter;
+}
+.button__google-plus{
+  background-color: $google-plus;
+}
+.button__view-shortlist{
+  margin-top: 4.55vh;
+  line-height: 1.6em;
+  background-color: $love;
+  color: #fff;
+}
+.shortlist__count{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+
+#mobile-menu {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 50px auto;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+}
+
+#mobile-menu span{
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 100%;
+  background: rgba(255,255,255,.8);
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .25s ease-in-out;
+  -moz-transition: .25s ease-in-out;
+  -o-transition: .25s ease-in-out;
+  transition: .25s ease-in-out;
+}
+#mobile-menu{
+  position: absolute;
+  right: 10px;
+  top:-28px;
+  z-index: 99999;
+}
+#mobile-menu span:nth-child(1) {
+  top: 0px;
+}
+
+#mobile-menu span:nth-child(2),#mobile-menu span:nth-child(3) {
+  top: 14px;
+}
+
+#mobile-menu span:nth-child(4) {
+  top: 28px;
+}
+
+#mobile-menu.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#mobile-menu.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#mobile-menu.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#mobile-menu.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.button__mobile-contact{
+  display: none;
+  position: fixed;
+  border: none;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 30px;
+  background-color: $highlight;
+  top: 76vh;
+  top: calc(100vh - 140px);
+  right: 15px;
+  z-index: 97;
+  transition: transform .35s ease, background-color .35s ease, color .35s ease;
+  @media (max-width: $screen-sm-max){
+    display: block;
+  }
+  &:focus {
+    outline: none;
+}
+}
+.button__mobile-contact__open{
+  transform: rotate(45deg);
+  background-color: $sub;
+  color: $mercury;
+}
+.sidebar__fixed{
+  position: fixed;
+  right: 0;
+  margin-top: 19vh;
+  z-index: 96;
+  @media (max-width: $screen-sm-max){
+    right: 65px;
+    margin-top: 0;
+    top: calc(100vh - 130px);
+    opacity: 0;
+    transition: opacity .35s ease-in-out, transform .35s ease-in-out;
+  }
+}
+.sidebar__fixed__exposed{
+  opacity: 1;
+}
+.button__contact{
+  @media (max-width: $screen-sm-max){
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 30px;
+    backdrop-filter: none;
+    position: absolute;
+    top: 0;
+    bottom:0;
+    margin-top: 0;
+    right: 0;
+    transform: translateX(50px);
+    transition: margin-top .35s ease-in-out;
+  }
+}
+.sidebar__fixed__exposed > .button__contact{
+  @media (max-width: $screen-sm-max){
+    margin-top: -140px;
+  }
+}
+.sidebar__fixed__exposed > .button__contact + .button__contact{
+  @media (max-width: $screen-sm-max){
+    margin-top: -210px;
+  }
+}
+.sidebar__fixed__exposed > .button__contact + .button__contact + .button__contact{
+  @media (max-width: $screen-sm-max){
+    margin-top: -280px;
+  }
+}
+.sidebar__fixed__exposed > .button__contact + .button__contact + .button__contact + .button__contact{
+  @media (max-width: $screen-sm-max){
+    margin-top: -350px;
+  }
+}
+.button__back{
+  @media (max-width: $screen-sm-max){
+    margin-top: -40px;
+  }
+}

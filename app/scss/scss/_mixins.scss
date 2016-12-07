@@ -1,0 +1,5 @@
+@mixin transition-all($duration) {
+  transition: background-color $duration ease,
+  color $duration ease,
+  border-color $duration ease;
+}
